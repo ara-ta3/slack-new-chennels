@@ -1,0 +1,25 @@
+{
+  "name": "slack-new-chennels",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Makefile",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ara-ta3/slack-new-chennels.git"
+  },
+  "keywords": [
+    "slack"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ara-ta3/slack-new-chennels/issues"
+  },
+  "homepage": "https://github.com/ara-ta3/slack-new-chennels#readme",
+  "dependencies": {
+    "slackbotapi": "^1.3.7"
+  }
+}

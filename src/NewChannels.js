@@ -1,5 +1,8 @@
 var slackAPI = require('slackbotapi');
-var token = process.env.wEB_SLACK_TOKEN;
+var token = process.env.WEB_SLACK_TOKEN;
+var botName = process.env.BOT_NAME;
+var targetChannel = process.env.TARGET_SLACK_CHANNEL;
+
 if (!token) {
     console.error("slack web api token is not set");
     console.error("please `export wEB_SLACK_TOKEN`");
@@ -13,8 +16,8 @@ var slack = new slackAPI({
 
 slack.on('channel_created', function (data) {
     var data = {
-        channel: "#new_channels",
-        username: "new_channels_bot",
+        channel: targetChannel,
+        username: botName,
         text: "new channel <#" + data.channel.id + "|" + data.channel.name +"> has been created",
     };
     slack.reqAPI("chat.postMessage",data);

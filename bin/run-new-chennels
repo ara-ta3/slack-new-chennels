@@ -1,0 +1,11 @@
+#! /bin/sh
+
+file=${1:- "./credentials/sample"}
+. $file; \
+    export WEB_SLACK_TOKEN; \
+    export BOT_NAME; \
+    export TARGET_SLACK_CHANNEL;
+
+
+node src/NewChannels.js
+
